@@ -7,7 +7,7 @@
 <!ENTITY launch "Settings/VMSwicther">
 <!ENTITY plugdir "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github "meehab/unRAID-VM-Switcher">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/release/&name;.plg">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/release/&name;.plg">
 ]>
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="random" min="6.7.0" support="#">
 <CHANGES>
@@ -24,7 +24,7 @@ rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2&gt;/dev/null | grep -v '&ve
 The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;-x86_64-1.txz" Run="upgradepkg --install-new">
-<URL>https://raw.github.com/&github;/master/archive/&name;-&version;-x86_64-1.txz</URL>
+<URL>https://raw.github.com/&github;/master/release/&name;-&version;-x86_64-1.txz</URL>
 <MD5>&md5;</MD5>
 </FILE>
   <!--
