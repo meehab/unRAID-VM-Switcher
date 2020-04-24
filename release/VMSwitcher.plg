@@ -26,7 +26,7 @@ rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2&gt;/dev/null | grep -v '&ve
 The 'source' file.
 -->
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;-x86_64-1.txz" Run="upgradepkg --install-new">
-<URL>https://github.com/&github;/raw/master/release/&name;-&version;-x86_64-1.txz</URL>
+<URL>https://raw.github.com/&github;/master/release/&name;-&version;-x86_64-1.txz</URL>
 <MD5>&md5;</MD5>
 </FILE>
   <!--
