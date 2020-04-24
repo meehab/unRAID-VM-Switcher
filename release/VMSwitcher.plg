@@ -14,14 +14,12 @@
 ###2020.04.24a
 - First test release.
 </CHANGES>
-<!--
 <FILE Run="/bin/bash">
 <INLINE>
 # Remove old 'source' files
 rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2&gt;/dev/null | grep -v '&version;')
 </INLINE>
 </FILE>
--->
   <!--
 The 'source' file.
 -->
