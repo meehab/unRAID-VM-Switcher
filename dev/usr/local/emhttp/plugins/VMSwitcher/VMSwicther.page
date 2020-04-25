@@ -1,6 +1,6 @@
 Menu="Utilities"
-Title="VM Switcher"
 Type="xmenu"
+Title="VM Switcher"
 Icon="random"
 Tabs="true"
 ---
