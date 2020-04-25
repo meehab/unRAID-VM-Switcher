@@ -11,8 +11,9 @@
 ]>
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="random" min="6.7.0" support="#">
 <CHANGES>
-###2020.04.25a
+###2020.04.25d
 - Added Tabs
+- Fixed Paths
 
 ###2020.04.24a
 - First test release.
