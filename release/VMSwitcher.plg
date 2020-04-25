@@ -1,9 +1,9 @@
 <?xml version="1.0" standalone="yes"?>
 <!DOCTYPE PLUGIN [
 <!ENTITY name "VMSwitcher">
-<!ENTITY author "Peter Mee / Mediaserver8">
-<!ENTITY version "2020.04.24a">
-<!ENTITY md5 "f4921e8d5cd3e344a96e8f1742f9ff5f">
+<!ENTITY author "Peter Mee / MediaServer8">
+<!ENTITY version "2020.04.25a">
+<!ENTITY md5 "1af235b81fe9ef25db157dcac0772b02">
 <!ENTITY launch "Settings/VMSwicther">
 <!ENTITY plugdir "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github "meehab/unRAID-VM-Switcher">
@@ -11,6 +11,9 @@
 ]>
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="random" min="6.7.0" support="#">
 <CHANGES>
+###2020.04.25a
+- Added Tabs
+
 ###2020.04.24a
 - First test release.
 </CHANGES>

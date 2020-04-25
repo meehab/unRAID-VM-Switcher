@@ -1,6 +1,8 @@
 Menu="Utilities"
 Title="VM Switcher"
+Type="xmenu"
 Icon="random"
+Tabs="true"
 ---
 <style>
 table.vfio thead tr:first-child td{font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;}
@@ -28,7 +30,7 @@ Comment
 
 <script>
 $(function() {
-
+	showStatus('<?=$sName?>');
 });
 
 
