@@ -8,7 +8,8 @@ table.vfio thead tr:last-child{border-bottom:1px solid #2b2b2b}
 tr.checked { background-color: #c6eac5; color:#000; }
 tr.iommu { background-color: #B2D2B1; color:#000; }
 textarea { width:90%; }
-div.desc { padding-left:50px; padding-right:50px; padding-bottom:75px; }
+div.desc { padding-left:50px; padding-right:50px; padding-bottom:75px; }]
+div.form { padding-left:50px; padding-right:50px; padding-bottom:75px; }
 </style>
 
 <?php 
@@ -18,30 +19,29 @@ Comment
 ?>
 
 <div class="desc">
-<b>Instructions:</b> Target Setting Instructions Here
-<br><br>
-<b>Note:</b> Notes Here
+<b>Instructions:</b> Enable and configure your target systems.<br/><br/>
+<i>Add hostdev data for passthrough GPUs, Adapters & USB devices permanently associated with each of your workstations.</i>
 </div>
 
-<div>
-
-<form>
-<form>
+<div class="desc">
+<form id="targetConfig" onsubmit="return false">
 <p>TARGET 1</p>
 <label for="T1name">name</label>
-<input type="text" id="T1name">&nbsp;&nbsp;
-<input type="checkbox" id="T1enable" onclick="EnableDisableTextBox(this, 'T1Data')">
+<input type="text" id="T1name" size="20">&nbsp;&nbsp;
+<input type="checkbox" id="T1enable" onclick="EnableDisableTextBox(this, 'T1data')">
 <label for="T1enable">enable</label>
 <br/><br/>
-<textarea name="Data" id="T1Data" rows="8" cols="50" disabled="disabled">Enter code here...</textarea>
+<textarea name="Data" id="T1data" rows="8" cols="40" disabled="disabled">Enter code here...</textarea>
 <br/><br/>
 <p>TARGET 2</p>
 <label for="T1name">name</label>
-<input type="text" id="T2name">&nbsp;&nbsp;
-<input type="checkbox" id="T2enable" onclick="EnableDisableTextBox(this, 'T2Data')">
+<input type="text" id="T2name" size="20">&nbsp;&nbsp;
+<input type="checkbox" id="T2enable" onclick="EnableDisableTextBox(this, 'T2data')">
 <label for="T2enable">enable</label>
 <br/><br/>
-<textarea name="Data" id="T2Data" rows="8" cols="50" disabled="disabled">Enter code here...</textarea>
+<textarea name="Data" id="T2data" rows="8" cols="40" disabled="disabled">Enter code here...</textarea>
+<br/><br/>
+<input id="savecfg" type="submit" value="Save" onclick="saveCfg();">
 </form>
 </div>
 
@@ -64,5 +64,34 @@ function EnableDisableTextBox(chkBox, targetArea) {
             myTarget.focus();
         }
     }
+
+
+// ****************
+// Construct CFG and export
+// ****************
+
+
+function saveCfg() {
+
+	var xmlDoc = "<?xml version=\"1.0\"?>"
+     
+    var cnt = 2; 
+	var i;
+    
+
+	for (i = 0; i < cnt; i++) {
+  		var nm = document.getElementById("T"+(i+1)+"name").value;
+  		var en = document.getElementById("T"+(i+1)+"enable").checked;
+  		var td = document.getElementById("T"+(i+1)+"data").value;
+
+
+        xmlDoc = xmlDoc+"\n<Target"+(i+1)+" name=\""+nm+"\" enabled=\""+en+" \">\n"+td+"\n</Target"+(i+1);
+		
+	}
+
+	alert (xmlDoc);
+
+}
+
 
 </script>

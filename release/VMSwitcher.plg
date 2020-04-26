@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name "VMSwitcher">
 <!ENTITY author "Peter Mee / MediaServer8">
-<!ENTITY version "2020.04.26">
-<!ENTITY md5 "76ba3228187630fa231fe84aa8605ecf">
+<!ENTITY version "2020.04.26a">
+<!ENTITY md5 "859912869cbb1378ce111c2d511cf57b">
 <!ENTITY launch "Settings/VMSwicther">
 <!ENTITY plugdir "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github "meehab/unRAID-VM-Switcher">
@@ -13,6 +13,7 @@
 <CHANGES>
 ###2020.04.26
 - Added Target Fields
+- Added Target XML compile
 
 ###2020.04.25
 - Added Tabs
