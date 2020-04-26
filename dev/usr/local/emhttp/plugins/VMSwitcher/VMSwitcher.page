@@ -8,7 +8,7 @@ Tabs="true"
 <?php
 function js_link($src)
 {
-    if(file_exists("/usr/local/emhttp/plugins/VMSwitcher/scripts/" . $src))
+    if(file_exists("/usr/local/emhttp" . $src))
     {
         //we know it will exists within the HTTP Context
         return sprintf("<script type=\"text/javascript\" src=\"%s\"></script>",$src);
@@ -16,7 +16,7 @@ function js_link($src)
     return "<!-- Unable to load " . $src . "-->";
 }
 
-echo js_link("javascript.js");
+echo js_link("/plugins/VMSwitcher/scripts/javascript.js");
 
 ?>
 <div class="desc">
