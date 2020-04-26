@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name "VMSwitcher">
 <!ENTITY author "Peter Mee / MediaServer8">
-<!ENTITY version "2020.04.26c">
-<!ENTITY md5 "8dc69e41cd59b103ebf53002ae7ccf97">
+<!ENTITY version "2020.04.26d">
+<!ENTITY md5 "ed61cda2ce0fd83a5e22d9ee47360f12">
 <!ENTITY launch "Settings/VMSwicther">
 <!ENTITY plugdir "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github "meehab/unRAID-VM-Switcher">
