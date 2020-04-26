@@ -37,10 +37,10 @@ function saveTargetCfg() {
 
 	//alert (xmlDoc);
 
-  $.get( "/plugins/VMSwitcher/scripts/save.php", { cfg: 'Targets', data: xmlDoc } )
+  $.get( "/plugins/VMSwitcher/scripts/save.php", { cfg: 'targetConfig.', data: xmlDoc } )
   .done(function( data ) {
     alert( data );
-  }
+  });
 
 }
 
