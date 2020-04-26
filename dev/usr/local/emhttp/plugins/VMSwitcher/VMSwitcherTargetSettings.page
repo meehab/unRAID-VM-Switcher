@@ -28,7 +28,7 @@ Comment
 <p>TARGET 1</p>
 <label for="T1name">name</label>
 <input type="text" id="T1name" size="20">&nbsp;&nbsp;
-<input type="checkbox" id="T1enable" onclick="EnableDisableTextBox(this, 'T1data')">
+<input type="checkbox" id="T1enable" onclick="EnableDisableTextBox(this, 'T1data');">
 <label for="T1enable">enable</label>
 <br/><br/>
 <textarea name="Data" id="T1data" rows="8" cols="40" disabled="disabled">Enter code here...</textarea>
@@ -36,7 +36,7 @@ Comment
 <p>TARGET 2</p>
 <label for="T1name">name</label>
 <input type="text" id="T2name" size="20">&nbsp;&nbsp;
-<input type="checkbox" id="T2enable" onclick="EnableDisableTextBox(this, 'T2data')">
+<input type="checkbox" id="T2enable" onclick="EnableDisableTextBox(this, 'T2data');">
 <label for="T2enable">enable</label>
 <br/><br/>
 <textarea name="Data" id="T2data" rows="8" cols="40" disabled="disabled">Enter code here...</textarea>
