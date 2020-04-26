@@ -1,70 +1,9 @@
 Menu="VMSwitcher:1"
 Title="Target Settings"
 ---
-<?php 
-/*
-Comment
-*/
+<?php
+#Comment
 ?>
-<script>
-$(function() {
-	// showStatus('<?=$sName?>');
-});
-
-
-// ****************
-// Enable/Disable Target text based on enabled checkbox
-// ****************
-
-function EnableDisableTextBox(chkBox, targetArea) {
-
-        var myTarget = document.getElementById(targetArea);
-        myTarget.disabled = chkBox.checked ? false : true;
-        if (!myTarget.disabled) {
-            myTarget.focus();
-        }
-    }
-
-
-// ****************
-// Construct CFG and export
-// ****************
-
-
-function saveCfg() {
-
-	var xmlDoc = "<?xml version=\"1.0\"?>"
-     
-    var cnt = 2; 
-	var i;
-    
-
-	for (i = 0; i < cnt; i++) {
-  		var nm = document.getElementById("T"+(i+1)+"name").value;
-  		var en = document.getElementById("T"+(i+1)+"enable").checked;
-  		var td = document.getElementById("T"+(i+1)+"data").value;
-
-
-        xmlDoc = xmlDoc+"\n<Target"+(i+1)+" name=\""+nm+"\" enabled=\""+en+"\">\n"+td+"\n</Target"+(i+1);
-		
-	}
-
-	alert (xmlDoc);
-
-}
-
-
-</script>
-<style>
-table.vfio thead tr:first-child td{font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;}
-table.vfio thead tr:last-child{border-bottom:1px solid #2b2b2b}
-.usb { padding-left:50px; }
-tr.checked { background-color: #c6eac5; color:#000; }
-tr.iommu { background-color: #B2D2B1; color:#000; }
-textarea { width:90%; }
-div.desc { padding-left:50px; padding-right:50px; padding-bottom:75px; }
-div.formm { padding-left:50px; padding-right:50px; padding-bottom:75px; }
-</style>
 <div class="desc">
 <b>Instructions:</b> Enable and configure your target systems.<br/><br/>
 <i>Add hostdev data for passthrough GPUs, Adapters & USB devices permanently associated with each of your workstations.</i>

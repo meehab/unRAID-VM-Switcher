@@ -4,3 +4,18 @@ Title="VM Switcher"
 Icon="random"
 Tabs="true"
 ---
+<?php include '/usr/local/emhttp/plugins/VMSwitcher/scripts/styles.css';?>
+<?php
+function js_link($src)
+{
+    if(file_exists("my/html/root/" . $src))
+    {
+        //we know it will exists within the HTTP Context
+        return sprintf("<script type=\"text/javascript\" src=\"%s\"></script>",$src);
+    }
+    return "<!-- Unable to load " . $src . "-->";
+}
+
+echo js_link("/usr/local/emhttp/plugins/VMSwitcher/scripts/javascript.js");
+
+?>
