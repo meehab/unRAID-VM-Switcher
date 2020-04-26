@@ -1,9 +1,3 @@
-<script>
-$(function() {
-	// showStatus('<?=$sName?>');
-});
-
-
 // ****************
 // Enable/Disable Target text based on enabled checkbox
 // ****************
@@ -45,5 +39,3 @@ function saveCfg() {
 
 }
 
-
-</script>
