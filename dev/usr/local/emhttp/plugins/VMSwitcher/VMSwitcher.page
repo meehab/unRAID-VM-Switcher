@@ -8,7 +8,7 @@ Tabs="true"
 <?php
 function js_link($src)
 {
-    if(file_exists("my/html/root/" . $src))
+    if(file_exists("/usr/local/emhttp/plugins/VMSwitcher/scripts/" . $src))
     {
         //we know it will exists within the HTTP Context
         return sprintf("<script type=\"text/javascript\" src=\"%s\"></script>",$src);
@@ -16,6 +16,10 @@ function js_link($src)
     return "<!-- Unable to load " . $src . "-->";
 }
 
-echo js_link("/usr/local/emhttp/plugins/VMSwitcher/scripts/javascript.js");
+echo js_link("javascript.js");
 
 ?>
+<div class="desc">
+<b>Instructions:</b> This page will show VM status and permit VMs to be launched on specific target workstations.<br/><br/>
+<i>Nothing here yet. Still lost to be done. Targets and VMs to be set up first.</i>
+</div>
