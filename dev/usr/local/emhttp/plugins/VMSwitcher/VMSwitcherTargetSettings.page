@@ -23,12 +23,46 @@ Comment
 <b>Note:</b> Notes Here
 </div>
 
+<div>
+
+<form>
+<form>
+<p>TARGET 1</p>
+<label for="T1name">name</label>
+<input type="text" id="T1name">&nbsp;&nbsp;
+<input type="checkbox" id="T1enable" onclick="EnableDisableTextBox(this, 'T1Data')">
+<label for="T1enable">enable</label>
+<br/><br/>
+<textarea name="Data" id="T1Data" rows="8" cols="50" disabled="disabled">Enter code here...</textarea>
+<br/><br/>
+<p>TARGET 2</p>
+<label for="T1name">name</label>
+<input type="text" id="T2name">&nbsp;&nbsp;
+<input type="checkbox" id="T2enable" onclick="EnableDisableTextBox(this, 'T2Data')">
+<label for="T2enable">enable</label>
+<br/><br/>
+<textarea name="Data" id="T2Data" rows="8" cols="50" disabled="disabled">Enter code here...</textarea>
+</form>
+</div>
 
 
 <script>
 $(function() {
-	showStatus('<?=$sName?>');
+	// showStatus('<?=$sName?>');
 });
 
+
+// ****************
+// Enable/Disable Target text based on enabled checkbox
+// ****************
+
+function EnableDisableTextBox(chkBox, targetArea) {
+
+        var myTarget = document.getElementById(targetArea);
+        myTarget.disabled = chkBox.checked ? false : true;
+        if (!myTarget.disabled) {
+            myTarget.focus();
+        }
+    }
 
 </script>
