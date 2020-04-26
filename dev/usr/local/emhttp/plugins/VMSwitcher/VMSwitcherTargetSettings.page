@@ -6,7 +6,6 @@ Title="Target Settings"
 Comment
 */
 ?>
-
 <script>
 $(function() {
 	// showStatus('<?=$sName?>');
@@ -56,7 +55,6 @@ function saveCfg() {
 
 
 </script>
-
 <style>
 table.vfio thead tr:first-child td{font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;}
 table.vfio thead tr:last-child{border-bottom:1px solid #2b2b2b}
@@ -67,9 +65,6 @@ textarea { width:90%; }
 div.desc { padding-left:50px; padding-right:50px; padding-bottom:75px; }
 div.formm { padding-left:50px; padding-right:50px; padding-bottom:75px; }
 </style>
-
-
-
 <div class="desc">
 <b>Instructions:</b> Enable and configure your target systems.<br/><br/>
 <i>Add hostdev data for passthrough GPUs, Adapters & USB devices permanently associated with each of your workstations.</i>
