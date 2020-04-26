@@ -13,21 +13,21 @@ Title="Target Settings"
 <form id="targetConfig" onsubmit="return false">
 <p>TARGET 1</p>
 <label for="T1name">name</label>
-<input type="text" id="T1name" size="10">&nbsp;&nbsp;
+<input type="text" id="T1name" size="6">&nbsp;&nbsp;
 <input type="checkbox" id="T1enable" onclick="EnableDisableTextBox(this, 'T1data')">
 <label for="T1enable">enable</label>
 <br/><br/>
-<textarea name="Data" id="T1data" rows="8" cols="30" disabled="disabled">Enter code here...</textarea>
+<textarea name="Data" id="T1data" rows="8" cols="20" disabled="disabled">Enter code here...</textarea>
 <br/><br/>
 <p>TARGET 2</p>
 <label for="T1name">name</label>
-<input type="text" id="T2name" size="10">&nbsp;&nbsp;
+<input type="text" id="T2name" size="6">&nbsp;&nbsp;
 <input type="checkbox" id="T2enable" onclick="EnableDisableTextBox(this, 'T2data')">
 <label for="T2enable">enable</label>
 <br/><br/>
-<textarea name="Data" id="T2data" rows="8" cols="30" disabled="disabled">Enter code here...</textarea>
+<textarea name="Data" id="T2data" rows="8" cols="20" disabled="disabled">Enter code here...</textarea>
 <br/><br/>
-<input id="savecfg" type="submit" value="Save" onclick="saveCfg()">
+<input id="savecfg" type="submit" value="Save" onclick="saveTargetCfg()">
 </form>
 </div>
 

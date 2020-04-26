@@ -13,11 +13,11 @@ function EnableDisableTextBox(chkBox, targetArea) {
 
 
 // ****************
-// Construct CFG and export
+// Construct Targets CFG and export
 // ****************
 
 
-function saveCfg() {
+function saveTargetCfg() {
 
 	var xmlDoc = "<?xml version=\"1.0\"?>"
      
@@ -35,7 +35,12 @@ function saveCfg() {
 		
 	}
 
-	alert (xmlDoc);
+	//alert (xmlDoc);
+
+  $.get( "/plugins/VMSwitcher/scripts/save.php", { cfg: 'Targets', data: xmlDoc } )
+  .done(function( data ) {
+    alert( data );
+  }
 
 }
 
