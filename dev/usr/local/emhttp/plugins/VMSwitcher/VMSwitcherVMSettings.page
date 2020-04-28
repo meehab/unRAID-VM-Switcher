@@ -15,12 +15,27 @@ Title="VM Settings"
 
 $domlist = shell_exec('virsh list --all --name');
 $separator = "\r\n";
+$cnt = 0;
 
 $line = strtok($domlist, $separator);
 
 while ($line !== false) {
-    
-  echo $line,"\r\n";
+   $cnt = $cnt+1;
+ ?>
+ <div class="wrap-collabsible">
+  <input id="collapsible<?= $cnt ?>" class="toggle" type="checkbox">
+  <label for="collapsible?= $cnt ?>" class="lbl-toggle">?= $line ?></label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+        Form details for <?= $line ?> (<?= $cnt ?>)to be placed here, thank you!
+      </p>
+    </div>
+  </div>
+</div>
+<br/><br/><br/>
+<?php
+  
 
 
 
