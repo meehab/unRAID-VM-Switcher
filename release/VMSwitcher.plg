@@ -11,6 +11,9 @@
 ]>
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" icon="random" min="6.7.0" support="#">
 <CHANGES>
+###2020.04.28
+- Start OF VM Settings
+
 ###2020.04.26
 - Added Target Fields
 - Added Target XML Compile
