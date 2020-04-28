@@ -31,7 +31,7 @@ function saveTargetCfg() {
   		var td = document.getElementById("T"+(i+1)+"data").value;
 
 
-        xmlDoc = xmlDoc+"\n<Target"+(i+1)+" name=\""+nm+"\" enabled=\""+en+"\">\n"+td+"\n</Target"+(i+1);
+        xmlDoc = xmlDoc+"\n<Target"+(i+1)+" name='"+nm+"'' enabled='+en+"''>\n"+td+"\n</Target"+(i+1)+">";
 		
 	}
 

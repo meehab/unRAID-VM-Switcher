@@ -1,34 +1,32 @@
 Menu="VMSwitcher:2"
 Title="VM Settings"
 ---
-<style>
-table.vfio thead tr:first-child td{font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;}
-table.vfio thead tr:last-child{border-bottom:1px solid #2b2b2b}
-.usb { padding-left:50px; }
-tr.checked { background-color: #c6eac5; color:#000; }
-tr.iommu { background-color: #B2D2B1; color:#000; }
-textarea { width:90%; }
-div.desc { padding-left:50px; padding-right:50px; padding-bottom:75px; }
-</style>
-
-<?php 
-/*
-Comment
-*/
+<?php
+#Comment
 ?>
-
 <div class="desc">
-<b>Instructions:</b> VM Setting Instructions Here
-<br><br>
-<b>Note:</b> Notes Here
+<b>Instructions:</b> Enable and configure your VMs .<br/><br/>
+<i>Add hostdev data for passthrough Adapters & USB devices with discrete VMs.</i>
 </div>
 
+<div class="formm">
+<?php
 
 
-<script>
-$(function() {
-	showStatus('<?=$sName?>');
-});
+$domlist = shell_exec('virsh list --all --name');
+$separator = "\r\n";
+
+$line = strtok($domlist, $separator);
+
+while ($line !== false) {
+    
+  echo $line,"\r\n";
 
 
-</script>
+
+    $line = strtok( $separator );
+}
+
+?>
+end list
+</div>

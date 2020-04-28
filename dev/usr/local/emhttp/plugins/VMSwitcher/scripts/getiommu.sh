@@ -27,3 +27,4 @@ for d in "${iommu[@]}" ; do
 		echo $group $reset $pci $id $desc
 	done
 done
+#notes
